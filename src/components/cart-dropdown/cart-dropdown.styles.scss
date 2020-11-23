@@ -17,7 +17,10 @@
     flex-direction: column;
     overflow: scroll;
   }
-
+  .emty-message {
+    font-size: 18px;
+    margin: 5px auto;
+  }
   button {
     margin-top: auto;
   }
