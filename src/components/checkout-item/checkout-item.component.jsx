@@ -9,7 +9,7 @@ import {
 
 import "./checkout-item.styles.scss";
 
-const CheckoutItem = ({ cartItem, clearItem, removeItem, asd }) => {
+const CheckoutItem = ({ cartItem, clearItem, removeItem, addIemasd }) => {
   const { name, imageUrl, price, quntity } = cartItem;
   return (
     <div className="checkout-item">
@@ -23,7 +23,7 @@ const CheckoutItem = ({ cartItem, clearItem, removeItem, asd }) => {
           &#x2770;
         </div>
         <span className="value">{quntity}</span>
-        <div className="arrow" onClick={() => asd(cartItem)}>
+        <div className="arrow" onClick={() => addIemasd(cartItem)}>
           &#x2771;
         </div>
       </span>
@@ -36,7 +36,7 @@ const CheckoutItem = ({ cartItem, clearItem, removeItem, asd }) => {
 };
 const mapDispatchToProps = (dispatch) => ({
   clearItem: (item) => dispatch(clearItemFromCart(item)),
-  asd: (item) => dispatch(addItem(item)),
+  addIemasd: (item) => dispatch(addItem(item)),
   removeItem: (item) => dispatch(removeItem(item)),
 });
 export default connect(null, mapDispatchToProps)(CheckoutItem);
